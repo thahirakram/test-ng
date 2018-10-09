@@ -6,6 +6,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { TableComponent } from './table/table.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { Form2Component } from './form2/form2.component';
 
 const rooter: Routes = [
   {
@@ -15,6 +17,10 @@ const rooter: Routes = [
   {
     path: 'table',
     component: TableComponent
+  },
+  {
+    path: 'form',
+    component: Form2Component
   }
 ];
 @NgModule({
@@ -23,10 +29,12 @@ const rooter: Routes = [
     NavbarComponent,
     LoginComponent,
     TableComponent,
-    FooterComponent
+    FooterComponent,
+    Form2Component
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(rooter)
   ],
   providers: [],
