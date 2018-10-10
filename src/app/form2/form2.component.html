@@ -1,25 +1,20 @@
 <div class="container">
   <div class="row mt-5">
-    <div class="col-lg-5 mx-auto">
-      <form name="form" class="mt-5" #form="ngForm" (ngSubmit)="submit(form)">
-
+    <div class="col-md-6 col-lg-4 mx-auto mt-5">
+      <form name="createform" #createform="ngForm" (ngSubmit)="sub(createform)">
         <div class="form-group">
-          <label>NAME</label>
-          <button class="x bg-transparent border-0 text-success mt-1" type="button" (click)="add()"><i class="fas fa-plus-circle"></i></button>
-          <input class="form-control" type="text" ngModel name="name" required>
-
+          <label>Name</label>
+          <button class="out-non bg-transparent  border-0" type="button" (click)="add()"><i class="fas fa-plus-circle"></i></button>
+          <input type="text" class="form-control" ngModel name="thahir" required>
         </div>
-
-        <div *ngFor="let d of data;let i = index;" class="form-group">
-          <label>NAME</label>
-          <button class="x bg-transparent border-0 text-success mt-1" type="button" (click)="remove(d)"><i class="fas fa-times"></i></button>
-          <input class="form-control" type="text" ngModel name="{{name + i}}" required>
-
+        <div *ngFor="let a of arr; let i = index;" class="form-group">
+          <label>Name</label>
+          <button class="out-non bg-transparent  border-0" type="button" (click)="remove(a)"><i class="fas fa-times"></i></button>
+          <input type="text" class="form-control" ngModel name="{{name + i}}" required>      
         </div>
+        <button type="submit" class="btn btn-block mt-5" [disabled]="createform.invalid">Login</button>
 
-        <button type="submit" class="btn btn-block btn-success" [disabled]="form.invalid">submit</button>
       </form>
     </div>
-
   </div>
 </div>

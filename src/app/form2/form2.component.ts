@@ -6,16 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form2.component.css']
 })
 export class Form2Component implements OnInit {
-  data = [];
+  arr = [];
   constructor() { }
 
   ngOnInit() {
   }
-  add() {
-    this.data.push({});
-  }
-  remove(d) {
-    const i = this.data.indexOf(d);
-    this.data.splice(i, 1);
-  }
+add() {
+  this.arr.push({});
+}
+remove(a) {
+  const i = this.arr.indexOf(a);
+  this.arr.splice(i, 1);
+}
 }

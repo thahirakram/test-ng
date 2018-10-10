@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   add() {
-    this.name.push({})
+    this.name.push({});
   }
   remove(n) {
    const i = this.name.indexOf(n);
